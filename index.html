@@ -1,259 +1,555 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zxx">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Yuditia Ariansyah — Portfolio</title>
-  <meta name="description" content="Portfolio of Yuditia Ariansyah — IT Leader, Project & Systems Integration" />
-  <link rel="icon" href="img/logo-icon.png">
-
-  <!-- Google font (optional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --muted:#9aa4b2;
-      --accent:#3b82f6;
-      --glass: rgba(255,255,255,0.03);
-      --radius:12px;
-      color-scheme: dark;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
-      background:linear-gradient(180deg,#071024 0%, #071826 60%);
-      color:#e6eef8;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-    }
-    .wrap{max-width:1100px;margin:36px auto;padding:28px;}
-    header{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:16px;margin-bottom:28px;
-    }
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{
-      width:54px;height:54px;border-radius:10px;background:var(--glass);
-      display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);
-      font-size:20px;
-    }
-    h1{margin:0;font-size:20px}
-    .cta a{background:var(--accent);color:#07203b;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-    main{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start}
-    @media (max-width:980px){main{grid-template-columns:1fr;padding:0;}}
-    /* Profile card */
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:22px;border-radius:var(--radius);box-shadow:0 6px 24px rgba(2,6,23,0.6)}
-    .hero{padding:18px}
-    .hero h2{font-size:28px;margin:0 0 6px}
-    .hero p{color:var(--muted);margin:0 0 14px}
-    .meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:14px}
-    .download{display:inline-block;margin-top:14px}
-    .download a{display:inline-block;text-decoration:none;padding:10px 12px;background:transparent;border:1px solid rgba(255,255,255,0.06);border-radius:10px;color:var(--accent);font-weight:600}
-    /* Skills */
-    .skills{margin-top:18px}
-    .skill{margin-bottom:12px}
-    .skill .label{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:6px}
-    .bar{height:10px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
-    .bar > span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#6ee7b7);width:0}
-    /* Resume / timeline */
-    .resume-list{margin-top:18px}
-    .resume-item{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);margin-bottom:10px}
-    .resume-item h4{margin:0 0 6px;font-size:15px}
-    .resume-item p{margin:0;color:var(--muted);font-size:14px}
-    /* Projects grid */
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
-    @media (max-width:600px){.projects{grid-template-columns:1fr}}
-    .project{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:10px}
-    .project img{width:100%;height:130px;object-fit:cover;border-radius:8px;margin-bottom:8px}
-    .project h5{margin:6px 0 4px}
-    .project p{margin:0;color:var(--muted);font-size:13px}
-    /* Contact */
-    .contact-form{display:flex;flex-direction:column;gap:10px}
-    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
-    button.send{background:var(--accent);border:none;color:#03102a;padding:10px;border-radius:8px;font-weight:700;cursor:pointer}
-    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center;padding:18px}
-    /* small helpers */
-    .small{font-size:13px;color:var(--muted)}
-  </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yuditia Ariansyah - About</title>
+	<link rel="icon" href="img/logo-icon.png">
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/perfect-scrollbar.css">
+	<!-- magic-mouse -->
+  <link rel="stylesheet" href="css/magic-mouse.css">
+  <!-- fancybox -->
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <!-- aos -->
+  <link rel="stylesheet" href="css/aos.css">
+  <!-- simple-line-icons -->
+  <link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- style -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- color -->
+	<link rel="stylesheet" href="css/color.css">
+	<!-- Font Awesome 5 -->
+	<script src="https://kit.fontawesome.com/27a041baf1.js" crossorigin="anonymous"></script>
 </head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">YA</div>
-        <div>
-          <h1>Yuditia Ariansyah</h1>
-          <div class="small">IT Leader • Project & Systems Integration • Product Owner</div>
+<body class="menu-layer">
+<!-- loader start-->
+<div class="page-loader">
+ <div class="spinner">
+	<p>loading...</p>
+	<div class="spinner-area spinner-first"></div>
+	<div class="spinner-area spinner-second"></div>
+	<div class="spinner-area spinner-third"></div>
+</div>
+</div>
+<!-- loader end-->
+<link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+<header class="two three" id="stickyHeader">
+    <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-2">
+                    <div class="logo-icon">
+                        <a class="magic-hover magic-hover__square" href="index.html">
+                        <img class="light" src="img/orix-logo.png" alt="logo">
+            <img class="drak" src="img/black-logo.png" alt="logo">
+                        </a> 
+                        <a href="javascript:void(0)" class="bar-menu magic-hover magic-hover__square"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+
+                 </div>
+                 <div class="col-xl-7">
+                    
+                 </div>
+                 <div class="col-xl-3">
+              <div class="extras">
+               <a href="javascript:void(0)" id="desktop-menu" class="magic-hover magic-hover__square menu-btn">
+                  <i class="fa-solid fa-bars"></i>
+                            </a>
+              
+              <a  href="pdf/orix.pdf" class="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s" target="_blank"><i class="fa-solid fa-download"></i>Download CV</a>
+              </div>
+          
+                </div>
+                    <div class="menu-wrap">
+                   <div class="menu-inner ps ps--active-x ps--active-y">
+                         <span class="menu-cls-btn"><i class="cls-leftright"></i><i class="cls-rightleft"></i></span>
+                      <div class="contact-info">
+                            <a class="magic-hover magic-hover__square" href="index.html">
+                                        <img src="img/black-logo.png" alt="logo">
+                                    </a>
+                                        <h5>I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction.</h5>
+                                        <ul class="recent-news gallery-photos">
+                                            <li>
+                                                <a class="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97"></a>
+                                            </li>
+                                            <li>
+                                                <a class="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97"></a>
+                                            </li>
+                                            <li>
+                                                <a class="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97"></a>
+                                            </li>
+                                            <li>
+                                                <a class="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97"></a>
+                                            </li>
+                                            <li>
+                                                <a class="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97"></a>
+                                            </li>
+                                            <li>
+                                                <a class="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97"></a>
+                                            </li>
+                                        </ul>
+
+                                                <div class="e-mail">
+                                                    <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                                                    <div><h6>Phone No</h6>
+                                                            <a class="magic-hover magic-hover__square" href="mailto:username@domain.com">username@domain.com</a>
+                                                    </div>
+                                                </div>
+                                                <div class="e-mail">
+                                                    <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                                                    <div><h6>Email Address</h6>
+                                                            <a class="magic-hover magic-hover__square" href="callto:+(123)4567890">+(123) 456 7890</a>
+                                                    </div>
+                                                </div>
+                                    </div>
+                            </div>
+                </div>
         </div>
-      </div>
-      <div class="cta">
-        <a href="pdf/orix.pdf" target="_blank" rel="noopener">Download CV</a>
-      </div>
-    </header>
-
-    <main>
-      <!-- LEFT: main content -->
-      <div>
-        <section class="card hero">
-          <h2>About Me</h2>
-          <p class="small">I lead IT projects and system integrations with 12+ years experience delivering enterprise solutions — Oracle Fusion, system migrations, projects across banking and corporate sectors. I blend technical, governance and delivery skills to launch robust digital products.</p>
-
-          <div class="meta" style="margin-top:12px">
-            <div><strong>Location</strong><div class="small">Jakarta, Indonesia</div></div>
-            <div><strong>Email</strong><div class="small">yuditia.ariansyah@gmail.com</div></div>
-            <div><strong>Phone</strong><div class="small">+62 812 3456 7890</div></div>
-          </div>
-
-          <div class="skills">
-            <div class="skill">
-              <div class="label"><span>Project Management</span><span>90%</span></div>
-              <div class="bar" data-value="90"><span></span></div>
-            </div>
-            <div class="skill">
-              <div class="label"><span>System Integration</span><span>85%</span></div>
-              <div class="bar" data-value="85"><span></span></div>
-            </div>
-            <div class="skill">
-              <div class="label"><span>Software Development</span><span>78%</span></div>
-              <div class="bar" data-value="78"><span></span></div>
-            </div>
-            <div class="skill">
-              <div class="label"><span>IT Governance</span><span>80%</span></div>
-              <div class="bar" data-value="80"><span></span></div>
-            </div>
-          </div>
-        </section>
-
-        <section class="card" style="margin-top:18px">
-          <h3 style="margin:0 0 12px">Selected Projects</h3>
-          <div class="projects">
-            <div class="project">
-              <img src="https://via.placeholder.com/600x400" alt="project 1" />
-              <h5>ISO 20022 Migration</h5>
-              <p class="small">Led migration project aligning payments messaging to ISO 20022 for enterprise banking operations.</p>
-            </div>
-            <div class="project">
-              <img src="https://via.placeholder.com/600x400" alt="project 2" />
-              <h5>Oracle Fusion Implementation</h5>
-              <p class="small">Implemented Oracle Fusion for financial processes and streamlined finance operations.</p>
-            </div>
-            <div class="project">
-              <img src="https://via.placeholder.com/600x400" alt="project 3" />
-              <h5>SharePoint & Collaboration</h5>
-              <p class="small">Designed SharePoint architecture and workflows for improved team collaboration.</p>
-            </div>
-            <div class="project">
-              <img src="https://via.placeholder.com/600x400" alt="project 4" />
-              <h5>Retail Investing Feature</h5>
-              <p class="small">Product owner for retail US stock investing feature — end-to-end from KYC to order execution.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="card" style="margin-top:18px">
-          <h3 style="margin:0 0 12px">Resume (Summary)</h3>
-
-          <div class="resume-list">
-            <div class="resume-item">
-              <h4>Act General Manager IT — Bisnis Indonesia</h4>
-              <p>Leading IT operations, program governance and delivery across media & publishing systems.</p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Project Release Manager — QNB</h4>
-              <p>Managed release cycles, deployments and cross-team coordination for banking projects.</p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Project Manager — Tech Mahindra</h4>
-              <p>Handled large-scale enterprise integrations and migration projects.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="card" style="margin-top:18px">
-          <h3 style="margin:0 0 12px">Contact</h3>
-          <p class="small">Interested in collaborating or hiring? Message me below or email <strong>yuditia.ariansyah@gmail.com</strong></p>
-
-          <form id="contact" class="contact-form" onsubmit="event.preventDefault(); alert('Thank you — message sending not configured in this demo.');">
-            <input type="text" placeholder="Your name" required/>
-            <input type="email" placeholder="Your email" required/>
-            <textarea rows="4" placeholder="Message" required></textarea>
-            <div style="display:flex;gap:10px;align-items:center;justify-content:space-between">
-              <div class="small">Or email directly: <a href="mailto:yuditia.ariansyah@gmail.com" style="color:var(--accent);text-decoration:none">yuditia.ariansyah@gmail.com</a></div>
-              <button class="send">Send Message</button>
-            </div>
-          </form>
-        </section>
-
-      </div>
-
-      <!-- RIGHT: sidebar -->
-      <aside>
-        <div class="card" style="text-align:center">
-          <img src="https://via.placeholder.com/220x220" alt="Yuditia" style="width:100%;height:auto;border-radius:10px;margin-bottom:12px;object-fit:cover">
-          <h3 style="margin:4px 0 0">Yuditia Ariansyah</h3>
-          <div class="small" style="margin-bottom:12px">IT Leader • PM • Systems Integration</div>
-
-          <div style="display:flex;gap:8px;justify-content:center">
-            <a href="#" style="text-decoration:none;color:var(--muted)">LinkedIn</a>
-            <span style="color:var(--muted)">•</span>
-            <a href="#" style="text-decoration:none;color:var(--muted)">GitHub</a>
-          </div>
-
-          <div style="margin-top:16px;text-align:left">
-            <h4 style="margin:0 0 8px">Skills</h4>
-            <div class="skill">
-              <div class="label"><span>Oracle / ERP</span><span>82%</span></div>
-              <div class="bar" data-value="82"><span></span></div>
-            </div>
-            <div class="skill">
-              <div class="label"><span>PM & Delivery</span><span>90%</span></div>
-              <div class="bar" data-value="90"><span></span></div>
-            </div>
-            <div class="skill">
-              <div class="label"><span>Integration</span><span>85%</span></div>
-              <div class="bar" data-value="85"><span></span></div>
-            </div>
-          </div>
-
         </div>
 
-        <div class="card" style="margin-top:18px">
-          <h4 style="margin:0 0 8px">Education</h4>
-          <p class="small" style="margin:0 0 8px"><strong>Bachelor Degree</strong><br>University of Studies</p>
-          <h4 style="margin:12px 0 8px">Availability</h4>
-          <p class="small">Open to freelance & leadership roles</p>
+        <div class="mobile-nav" id="mobile-nav" style="display: block;">
+            <div class="mobile-nav-img-data">
+                <a class="magic-hover magic-hover__square" href="index.html">
+           <img alt="logo" src="img/black-logo.png">
+        </a>
+      </div>
+            <ul>
+
+                  <li class="menu-item-has-children">
+
+                    <a class="magic-hover magic-hover__square" href="JavaScript:void(0)"><i class="icon-home"></i> Home</a>
+
+                  <ul class="sub-menu">
+
+                      <li><a class="magic-hover magic-hover__square" href="index.html">Home 1</a>
+
+                      <li><a class="magic-hover magic-hover__square" href="index-2.html">Home 2</a></li>
+
+                      <li><a class="magic-hover magic-hover__square" href="index-3.html">Home 3</a></li>
+
+                      <li><a class="magic-hover magic-hover__square" href="index-4.html">Home 4 ( Light )</a></li>
+                      <li><a class="magic-hover magic-hover__square" href="index-4-dark.html">Home 4 ( Dark )</a></li>
+
+                     </ul>
+
+                  </li>
+
+                  <li><a class="magic-hover magic-hover__square" href="about.html"><i class="icon-user"></i> About</a></li>
+
+                    <li class="menu-item-has-children"><a class="magic-hover magic-hover__square" href="JavaScript:void(0)"><i class="icon-briefcase"></i> Portfolio</a>
+
+                    <ul class="sub-menu">
+
+                      <li><a class="magic-hover magic-hover__square" href="portfolio-details-1.html">Portfolio Details 1</a>
+
+                      <li><a class="magic-hover magic-hover__square" href="portfolio-details-2.html">Portfolio Details 2</a></li>
+
+                      <li><a class="magic-hover magic-hover__square" href="portfolio-details-3.html">Portfolio Details 3</a></li>
+
+                     </ul>
+
+                  </li>
+
+                  <li class="menu-item-has-children"><a class="magic-hover magic-hover__square" href="JavaScript:void(0)"><i class="icon-layers"></i>Blog</a>
+
+                    <ul class="sub-menu">
+
+                        <li><a class="magic-hover magic-hover__square" href="our-blog.html">Our Blog</a>
+
+                      <li><a class="magic-hover magic-hover__square" href="blog-details-1.html">Blog Details 1</a>
+
+                      <li><a class="magic-hover magic-hover__square" href="blog-details-2.html">Blog Details 2</a></li>
+
+                     </ul>
+
+                  </li>
+
+                  <li class="menu-item-has-children"><a class="magic-hover magic-hover__square" href="JavaScript:void(0)"><i class="icon-folder"></i> Pages</a>
+
+                    <ul class="sub-menu">
+
+                      <li><a class="magic-hover magic-hover__square" href="services.html">Services</a>
+
+                      <li><a class="magic-hover magic-hover__square" href="services-details.html">Services Details</a></li>
+
+                      <li><a class="magic-hover magic-hover__square" href="pricing-plans.html">Pricing Plans</a>
+
+                      <li><a class="magic-hover magic-hover__square" href="404.html">404</a></li>
+
+                     </ul>
+
+                  </li>
+
+                  <li><a class="magic-hover magic-hover__square" href="contact.html"><i class="icon-envelope-open"></i> Contact</a></li>
+
+                </ul>
+
+          <a  class="magic-hover magic-hover__square" href="JavaScript:void(0)" id="res-cross"></a>
+
+           <a href="pdf/orix.pdf" class="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s" target="_blank"><i class="fa-solid fa-download"></i>Download CV</a>
+
+      </div>
+</header>
+<section id="particles-js" class="blog-detail pattern gap" style="background-image: url(https://via.placeholder.com/1920x530)">
+	<div class="container">
+	
+	</div>
+</section>
+
+<section id="about" class="about gap">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-up"  data-aos-delay="200" data-aos-duration="300">
+				<div class="about-mee">
+					<h2>About Me</h2>
+					<p>IT Leader • Project & Systems Integration • Product Owner</p>
+					
+					<ul class="social-media-icon"><li><a href="pdf/orix.pdf" class="button button--moema button--text-thick button--text-upper button--size-s" target="_blank"><i class="fa-solid fa-download"></i>Download CV</a></li>
+						<li><a class="f magic-hover magic-hover__square" href="javascript:void(0)"><i class="fa-brands fa-facebook-f"></i></a></li>
+						<li><a class="in magic-hover magic-hover__square" href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a></li>
+						<li><a class="t magic-hover magic-hover__square" href="javascript:void(0)"><i class="fa-brands fa-twitter"></i></a></li>
+					</ul>
+					<ul class="age">
+						<li><h6>Age:<span>36</span></h6></li>
+						<li><h6>Residence:<span>Indonesia</span></h6></li>
+						<li><h6>Address:<span>Mamapang prapatan Jakarta - Selatan</span></h6></li>
+						<li><h6>E-mail:<span>Yuditia.ariansyah@gmail.com</span></h6></li>
+						<li><h6>Freelance:<span>Available</span></h6></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-up"  data-aos-delay="300" data-aos-duration="400">
+				<div class="progress-data">
+					<p>Seasoned IT leader with over 12 years of experience driving enterprise-scale digital transformation across banking, media, and property industries. Proven expertise in project portfolio management, system integration, and IT governance. Skilled in leading cross-functional teams, managing vendor relations, and delivering mission-critical projects including Oracle Fusion ERP, ISO 20022 Migration, and automation systems. Recognized for aligning business strategy with technology innovation to achieve measurable business outcomes.</p>
+						<img alt="sine" src="img/sine.png">
+						<div class="progress-bara-data">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<div class="home-one-progress">
+										<div class="count-time">
+										<h2 class="timer count-title count-number" data-to="90" data-speed="2000">50</h2><span>%</span>
+										</div>
+										<h5>Project Management</h5>
+										<div class="meter cadetblue">
+											  <span data-progress="90" style="width:0;"></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<div class="home-one-progress">
+										<div class="count-time">
+										<h2 class="timer count-title count-number" data-to="80" data-speed="2000">75</h2><span>%</span>
+										</div>
+										<h5>Software Development</h5>
+										<div class="meter cadetblue">
+											  <span data-progress="80" style="width:0;"></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<div class="home-one-progress">
+										<div class="count-time">
+										<h2 class="timer count-title count-number" data-to="85" data-speed="2000">38</h2><span>%</span>
+										</div>
+										<h5>System Integration</h5>
+										<div class="meter cadetblue">
+											  <span data-progress="85" style="width:0;"></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<div class="home-one-progress">
+										<div class="count-time">
+										<h2 class="timer count-title count-number" data-to="90" data-speed="2000">63</h2><span>%</span>
+										</div>
+										<h5>Agile & Waterfall Methodologies</h5>
+										<div class="meter cadetblue">
+											  <span data-progress="90" style="width:0;"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section> 
+<section class="my-resume gap">
+			<div class="container">
+				<div class="hading" data-aos="fade-up"  data-aos-delay="200" data-aos-duration="300">
+					<img alt="dots" src="img/dots.png">
+					<p>Professional Experience</p>
+					<h2>My Resume</h2>
+				</div>
+			<div class="row">
+								<div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-up"  data-aos-delay="200" data-aos-duration="300">
+								  <div class="resume-data">
+									<div class="headings resume">
+										<h3>Education</h3>
+									</div>
+									<div class="education">
+										<h5>2014 to 2017</h5>
+										<p>Master Degree</p>
+										<div class="studies">
+											<h6>Bina Nusantara (BINUS) University</h6>
+											<p>MASTER OF INFORMATION SYSTEM</p>
+										</div>
+									</div>
+									<div class="education">
+										<h5>2010 to 2012</h5>
+										<p>Bachelor Degree</p>
+										<div class="studies">
+											<h6>Bina Nusantara (BINUS) University</h6>
+											<p>Information Sistem</p>
+										</div>
+									</div>
+									<div class="education ">
+										<h5>2204 to 2007</h5>
+										<p>SENIOR HIGH SCHOOL</p>
+										<div class="studies">
+											<h6>SMAN 6, Jakarta</h6>
+											<p>Social Studies</p>
+										</div>
+									</div>
+								  </div>
+
+								  <div class="resume-data">
+									<div class="headings resume">
+										<h3>Licenses & Certification</h3>
+									</div>
+									<div class="education">
+										<h5>2025</h5>
+										<p>Project Management</p>
+										<div class="studies">
+											<h6>Project Management InstituteProject Management Institute (PMI)</h6>
+											<p>Project Management Foundations</p>
+										</div>
+									</div>
+									<div class="education">
+										<h5>2025</h5>
+										<p>Critical Thinking</p>
+										<div class="studies">
+											<h6>National Association of State Boards of Accountancy (NASBA)</h6>
+											<p>Critical Thinking</p>
+										</div>
+									</div>
+
+										<div class="education">
+										<h5>2025</h5>
+										<p>Agile Foundations</p>
+										<div class="studies">
+											<h6>International Institute of Business Analysis (IIBA)</h6>
+											<p>Agile</p>
+										</div>
+									</div>
+
+
+										<div class="education">
+										<h5>2012</h5>
+										<p>IBM TM1 Developer</p>
+										<div class="studies">
+											<h6>IBM</h6>
+											<p>Cognos</p>
+										</div>
+									</div>
+
+										<div class="education">
+										<h5>2012</h5>
+										<p>IBM TM1 Administrator</p>
+										<div class="studies">
+											<h6>IBM</h6>
+											<p>Cognos</p>
+										</div>
+									</div>
+
+										<div class="education">
+										<h5>2013</h5>
+										<p>Microsoft Certified Professional</p>
+										<div class="studies">
+											<h6>Microsoft</h6>
+											<p>Designing and Developing Microsoft Applications</p>
+										</div>
+									</div>
+									
+
+									
+										<div class="education">
+										<h5>2013</h5>
+										<p>Microsoft Certified Professional Developer: Microsoft Visual Studio</p>
+										<div class="studies">
+											<h6>Microsoft</h6>
+											<p>Professional Developer</p>
+										</div>
+									</div>
+									
+									<div class="education ">
+										<h5>2013</h5>
+										<p>Microsoft Certified Technology Specialist : SharePoint </p>
+										<div class="studies">
+											<h6>Microsoft</h6>
+											<p>Professional Developer</p>
+										</div>
+									</div>
+								  </div>
+								</div>
+
+								
+								
+								<div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-up"  data-aos-delay="200" data-aos-duration="300">
+								  <div class="resume-data">
+									<div class="headings resume">
+										<h3>Experience</h3>
+									</div>
+									<div class="education">
+										<h5>Nov 2024 to Present</h5>
+										<p>General Manager IT</p>
+										<div class="studies">
+											<h6>Bisnis Indonesia</h6>
+											<p>Led IT strategy and operations as Acting General Manager, managing a team of 20+ professionals. Spearheaded the development and integration of internal enterprise applications including Oracle Fusion ERP, HRIS & ESS, printing management system, subsidiary management platform (Jago Anak Usaha), corporate collaboration portal (Big Forum), career portal (Big Karier), and business networking platform (JIBI). Acted as both strategic leader and lead developer to drive digital transformation across the media group.</p>
+										</div>
+									</div>
+									<div class="education">
+										<h5>Jun 2023 to Nov 2024</h5>
+										<p>Project Release Manager</p>
+										<div class="studies">
+											<h6>Bank QNB Indonesia</h6>
+											<p>Managed end-to-end release cycles for critical banking systems, including QNB Fund Transfer (QFT), SWIFT transaction screening, Trade Finance, and customer portal (qnb.co.id). Led ISO 20022 (MT to MX) migration, OutSystems workflow automation, and User Access Review implementation. Coordinated with vendors, ensured compliance with banking standards, managed Capex budgets, and delivered monthly progress and financial reports to senior management.</p>
+										</div>
+									</div>
+
+									<div class="education ">
+										<h5>Sep 2022 to Jun 2023</h5>
+										<p>Project Manager</p>
+										<div class="studies">
+											<h6>Tech Mahindra</h6>
+											<p>Led IT transition and digital solution projects for major clients including Indosat Ooredoo Hutchison (IOH). Managed the full transition of Application Development & AMS from IBM to Tech Mahindra using structured knowledge transfer, shadowing, and stabilization phases. Also delivered an IoT-based Fleet Management System with real-time tracking, driver mobile app, and automated expense reporting. Oversaw LitmusT automation testing tool implementation.</p>
+										</div>
+									</div>
+
+										<div class="education ">
+										<h5>Jul 2020 to Sep 2022</h5>
+										<p>Project Manager</p>
+										<div class="studies">
+											<h6>Bank UOB Indonesia</h6>
+											<p>Co-led digital banking innovation projects under UOB TMRW platform. Delivered key features including TMRW Auto-Save (AI-driven automated savings) and TMRW Digital Serve 2.0 (enhanced chatbot with agent handoff and contextual guidance). Managed end-to-end delivery—from requirement gathering to UAT—including documentation (FSD/TSD), security compliance, infrastructure coordination, and </p>
+										</div>
+										</div>
+
+
+										<div class="education ">
+										<h5>Jul 2020 to Sep 2022</h5>
+										<p>Project Manager</p>
+										<div class="studies">
+											<h6>Bank UOB Indonesia</h6>
+											<p>Co-led digital banking innovation projects under UOB TMRW platform. Delivered key features including TMRW Auto-Save (AI-driven automated savings) and TMRW Digital Serve 2.0 (enhanced chatbot with agent handoff and contextual guidance). Managed end-to-end delivery—from requirement gathering to UAT—including documentation (FSD/TSD), security compliance, infrastructure coordination, and </p>
+										</div>
+										</div>
+									
+
+											<div class="education ">
+										<h5>Mar 2017 to Jul 2020</h5>
+										<p>Project Manager</p>
+										<div class="studies">
+											<h6>Sinarmas Land</h6>
+											<p>Designed and delivered enterprise applications including E-Pricelist (dynamic pricing with SAP integration), Project Online Custom (PPM with KPI dashboard and Power BI), and Project Management (Samakta Mitra). Led full SDLC, coordinated cross-functional teams, and provided technical solutions across .NET, SharePoint, and SQL Server environments </p>
+										</div>
+										</div>
+
+											<div class="education ">
+										<h5>March 2015 to March 2017</h5>
+										<p>Application Developer </p>
+										<div class="studies">
+											<h6>Total Bangun Persada</h6>
+											<p>Developed and maintained SharePoint-based enterprise systems including Engineering Knowledge Center, Employee Document Center, and Corporate Portal. Involved in full project lifecycle—from business analysis and agile development to deployment and post-launch support. </p>
+										</div>
+										</div>
+
+										<div class="education">
+										<h5>January 2011 to March 2015</h5>
+										<p>Application Developer </p>
+										<div class="studies">
+											<h6>Mastersystem Infotama</h6>
+											<p>Built custom SharePoint and .NET applications for clients across banking, government, and automotive sectors—including Bank Indonesia, Bank Mandiri, Astra Honda Motor, and Bappeda DKI. Tasks included development, bug fixing, user documentation, and system migration (e.g., SharePoint 2010 to 2013).</p>
+										</div>
+									</div>
+
+								</div>
+							  </div>
+							</div>
+		  </div>
+</section> 
+<div class="clients-data">
+    <div class="container">
+        <div class="row client-logo owl-carousel owl-theme" data-aos="fade-up"  data-aos-delay="200" data-aos-duration="300">
+            <div class="col-lg-3 item">
+                <div class="clients-color">
+                    <img alt="clients" src="https://via.placeholder.com/278x128">
+                </div>
+            </div>
+            <div class="col-lg-3 item">
+                <div class="clients-color">
+                    <img alt="clients" src="https://via.placeholder.com/278x128">
+                </div>
+            </div>
+            <div class="col-lg-3 item">
+                <div class="clients-color">
+                    <img alt="clients" src="https://via.placeholder.com/278x128">
+                </div>
+            </div>
+            <div class="col-lg-3 item">
+                <div class="clients-color">
+                    <img alt="clients" src="https://via.placeholder.com/278x128">
+                </div>
+            </div>
+            <div class="col-lg-3 item">
+                <div class="clients-color">
+                    <img alt="clients" src="https://via.placeholder.com/278x128">
+                </div>
+            </div>
         </div>
-      </aside>
-    </main>
+    </div>
+</div>
 
-    <footer>
-      © <span id="year"></span> Yuditia Ariansyah • Built with care — portfolio template
-    </footer>
-  </div>
+<footer class="gap" style="background-image: url(./img/footer.png)">
+	<div class="container">
+		<div class="footer-data">
+			<img alt="log" src="img/orix-logo.png">
+			<p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris Morbi accumsan ipsuy
+					a odio tincdunt ilmauctor Class aptent taciti sociosqu ads Etiam.</p>
+					<ul class="social-media-footer">
+						<li><a class="magic-hover magic-hover__square" href="#"><i class="fa-brands fa-facebook-f fb"></i>Facebook</a></li>
+						<li><a class="magic-hover magic-hover__square" href="#"><i class="fa-brands fa-twitter tw"></i>Twitter</a></li>
+						<li><a class="magic-hover magic-hover__square" href="#"><i class="fa-brands fa-vimeo-v vi"></i>Vimeo</a></li>
+						<li><a class="magic-hover magic-hover__square" href="#"><i class="fa-brands fa-linkedin-in in"></i>Linked In</a></li>
+					</ul>
+					<h6>© 2025 CV Resume<i class="fa-solid fa-heart"></i>By yuditia Ariansyah, All Rights Reserved</h6>
+		</div>
+	</div>
+</footer>
 
-  <script>
-    // Set year
-    document.getElementById('year').textContent = new Date().getFullYear();
+<!-- bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<!-- jQuery -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/particles.js"></script>
+	<script src="js/particles-2.js"></script>
+	<!-- owl.carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/perfect-scrollbar.min.js"></script>
+	<!-- fancybox -->
+    <script src="js/jquery.fancybox.min.js"></script>
+	<!-- aos -->
+	<script src="js/aos.js"></script>
+	<!-- cursor -->
+	<script src="js/cursor.js"></script>
+	<!-- custom -->
+	<script src="js/custom.js"></script>
 
-    // Animate bars on load
-    function animateBars(){
-      document.querySelectorAll('.bar').forEach(el=>{
-        const span = el.querySelector('span');
-        const value = parseInt(el.getAttribute('data-value') || '0',10);
-        span.style.transition = 'width 900ms cubic-bezier(.2,.8,.2,1)';
-        requestAnimationFrame(()=> { span.style.width = value + '%'; });
-      });
-    }
-    // wait for load
-    if (document.readyState === 'complete') animateBars();
-    else window.addEventListener('load', animateBars);
-  </script>
 </body>
-</html>
