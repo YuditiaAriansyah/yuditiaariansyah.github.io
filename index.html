@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yuditia Ariansyah — Portfolio</title>
+  <meta name="description" content="Portfolio of Yuditia Ariansyah — IT Leader, Project & Systems Integration" />
+  <link rel="icon" href="img/logo-icon.png">
+
+  <!-- Google font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#3b82f6;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#071024 0%, #071826 60%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .wrap{max-width:1100px;margin:36px auto;padding:28px;}
+    header{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px;margin-bottom:28px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:54px;height:54px;border-radius:10px;background:var(--glass);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);
+      font-size:20px;
+    }
+    h1{margin:0;font-size:20px}
+    .cta a{background:var(--accent);color:#07203b;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    main{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start}
+    @media (max-width:980px){main{grid-template-columns:1fr;padding:0;}}
+    /* Profile card */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:22px;border-radius:var(--radius);box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+    .hero{padding:18px}
+    .hero h2{font-size:28px;margin:0 0 6px}
+    .hero p{color:var(--muted);margin:0 0 14px}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+    .download{display:inline-block;margin-top:14px}
+    .download a{display:inline-block;text-decoration:none;padding:10px 12px;background:transparent;border:1px solid rgba(255,255,255,0.06);border-radius:10px;color:var(--accent);font-weight:600}
+    /* Skills */
+    .skills{margin-top:18px}
+    .skill{margin-bottom:12px}
+    .skill .label{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:6px}
+    .bar{height:10px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
+    .bar > span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#6ee7b7);width:0}
+    /* Resume / timeline */
+    .resume-list{margin-top:18px}
+    .resume-item{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);margin-bottom:10px}
+    .resume-item h4{margin:0 0 6px;font-size:15px}
+    .resume-item p{margin:0;color:var(--muted);font-size:14px}
+    /* Projects grid */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+    @media (max-width:600px){.projects{grid-template-columns:1fr}}
+    .project{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:10px}
+    .project img{width:100%;height:130px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+    .project h5{margin:6px 0 4px}
+    .project p{margin:0;color:var(--muted);font-size:13px}
+    /* Contact */
+    .contact-form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    button.send{background:var(--accent);border:none;color:#03102a;padding:10px;border-radius:8px;font-weight:700;cursor:pointer}
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center;padding:18px}
+    /* small helpers */
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">YA</div>
+        <div>
+          <h1>Yuditia Ariansyah</h1>
+          <div class="small">IT Leader • Project & Systems Integration • Product Owner</div>
+        </div>
+      </div>
+      <div class="cta">
+        <a href="pdf/orix.pdf" target="_blank" rel="noopener">Download CV</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT: main content -->
+      <div>
+        <section class="card hero">
+          <h2>About Me</h2>
+          <p class="small">I lead IT projects and system integrations with 12+ years experience delivering enterprise solutions — Oracle Fusion, system migrations, projects across banking and corporate sectors. I blend technical, governance and delivery skills to launch robust digital products.</p>
+
+          <div class="meta" style="margin-top:12px">
+            <div><strong>Location</strong><div class="small">Jakarta, Indonesia</div></div>
+            <div><strong>Email</strong><div class="small">yuditia.ariansyah@gmail.com</div></div>
+            <div><strong>Phone</strong><div class="small">+62 812 3456 7890</div></div>
+          </div>
+
+          <div class="skills">
+            <div class="skill">
+              <div class="label"><span>Project Management</span><span>90%</span></div>
+              <div class="bar" data-value="90"><span></span></div>
+            </div>
+            <div class="skill">
+              <div class="label"><span>System Integration</span><span>85%</span></div>
+              <div class="bar" data-value="85"><span></span></div>
+            </div>
+            <div class="skill">
+              <div class="label"><span>Software Development</span><span>78%</span></div>
+              <div class="bar" data-value="78"><span></span></div>
+            </div>
+            <div class="skill">
+              <div class="label"><span>IT Governance</span><span>80%</span></div>
+              <div class="bar" data-value="80"><span></span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <h3 style="margin:0 0 12px">Selected Projects</h3>
+          <div class="projects">
+            <div class="project">
+              <img src="https://via.placeholder.com/600x400" alt="project 1" />
+              <h5>ISO 20022 Migration</h5>
+              <p class="small">Led migration project aligning payments messaging to ISO 20022 for enterprise banking operations.</p>
+            </div>
+            <div class="project">
+              <img src="https://via.placeholder.com/600x400" alt="project 2" />
+              <h5>Oracle Fusion Implementation</h5>
+              <p class="small">Implemented Oracle Fusion for financial processes and streamlined finance operations.</p>
+            </div>
+            <div class="project">
+              <img src="https://via.placeholder.com/600x400" alt="project 3" />
+              <h5>SharePoint & Collaboration</h5>
+              <p class="small">Designed SharePoint architecture and workflows for improved team collaboration.</p>
+            </div>
+            <div class="project">
+              <img src="https://via.placeholder.com/600x400" alt="project 4" />
+              <h5>Retail Investing Feature</h5>
+              <p class="small">Product owner for retail US stock investing feature — end-to-end from KYC to order execution.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <h3 style="margin:0 0 12px">Resume (Summary)</h3>
+
+          <div class="resume-list">
+            <div class="resume-item">
+              <h4>Act General Manager IT — Bisnis Indonesia</h4>
+              <p>Leading IT operations, program governance and delivery across media & publishing systems.</p>
+            </div>
+
+            <div class="resume-item">
+              <h4>Project Release Manager — QNB</h4>
+              <p>Managed release cycles, deployments and cross-team coordination for banking projects.</p>
+            </div>
+
+            <div class="resume-item">
+              <h4>Project Manager — Tech Mahindra</h4>
+              <p>Handled large-scale enterprise integrations and migration projects.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <h3 style="margin:0 0 12px">Contact</h3>
+          <p class="small">Interested in collaborating or hiring? Message me below or email <strong>yuditia.ariansyah@gmail.com</strong></p>
+
+          <form id="contact" class="contact-form" onsubmit="event.preventDefault(); alert('Thank you — message sending not configured in this demo.');">
+            <input type="text" placeholder="Your name" required/>
+            <input type="email" placeholder="Your email" required/>
+            <textarea rows="4" placeholder="Message" required></textarea>
+            <div style="display:flex;gap:10px;align-items:center;justify-content:space-between">
+              <div class="small">Or email directly: <a href="mailto:yuditia.ariansyah@gmail.com" style="color:var(--accent);text-decoration:none">yuditia.ariansyah@gmail.com</a></div>
+              <button class="send">Send Message</button>
+            </div>
+          </form>
+        </section>
+
+      </div>
+
+      <!-- RIGHT: sidebar -->
+      <aside>
+        <div class="card" style="text-align:center">
+          <img src="https://via.placeholder.com/220x220" alt="Yuditia" style="width:100%;height:auto;border-radius:10px;margin-bottom:12px;object-fit:cover">
+          <h3 style="margin:4px 0 0">Yuditia Ariansyah</h3>
+          <div class="small" style="margin-bottom:12px">IT Leader • PM • Systems Integration</div>
+
+          <div style="display:flex;gap:8px;justify-content:center">
+            <a href="#" style="text-decoration:none;color:var(--muted)">LinkedIn</a>
+            <span style="color:var(--muted)">•</span>
+            <a href="#" style="text-decoration:none;color:var(--muted)">GitHub</a>
+          </div>
+
+          <div style="margin-top:16px;text-align:left">
+            <h4 style="margin:0 0 8px">Skills</h4>
+            <div class="skill">
+              <div class="label"><span>Oracle / ERP</span><span>82%</span></div>
+              <div class="bar" data-value="82"><span></span></div>
+            </div>
+            <div class="skill">
+              <div class="label"><span>PM & Delivery</span><span>90%</span></div>
+              <div class="bar" data-value="90"><span></span></div>
+            </div>
+            <div class="skill">
+              <div class="label"><span>Integration</span><span>85%</span></div>
+              <div class="bar" data-value="85"><span></span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h4 style="margin:0 0 8px">Education</h4>
+          <p class="small" style="margin:0 0 8px"><strong>Bachelor Degree</strong><br>University of Studies</p>
+          <h4 style="margin:12px 0 8px">Availability</h4>
+          <p class="small">Open to freelance & leadership roles</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Yuditia Ariansyah • Built with care — portfolio template
+    </footer>
+  </div>
+
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Animate bars on load
+    function animateBars(){
+      document.querySelectorAll('.bar').forEach(el=>{
+        const span = el.querySelector('span');
+        const value = parseInt(el.getAttribute('data-value') || '0',10);
+        span.style.transition = 'width 900ms cubic-bezier(.2,.8,.2,1)';
+        requestAnimationFrame(()=> { span.style.width = value + '%'; });
+      });
+    }
+    // wait for load
+    if (document.readyState === 'complete') animateBars();
+    else window.addEventListener('load', animateBars);
+  </script>
+</body>
+</html>
