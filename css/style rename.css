@@ -2787,6 +2787,7 @@ body.dark #stickyHeader.slideUp{
 }
 #stickyHeader.slideUp img.drak{
     display: block;
+    width: 87px;
 }
 a.bar-menu{
         color: white;
