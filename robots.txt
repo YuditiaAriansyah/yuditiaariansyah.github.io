@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yuditiaariansyah.github.io/sitemap.xml
