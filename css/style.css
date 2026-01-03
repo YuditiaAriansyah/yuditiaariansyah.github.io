@@ -67,9 +67,40 @@ a{
     text-decoration: none;
 }
 h1{
+   position: relative;              /* WAJIB */
   font-size: 80px;
   line-height: 90px;
+  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+  z-index: 2;
 }
+h1:after {
+    content: attr(data-shadow);
+  position: absolute;
+  top: 0;                           /* KUNCI POSISI */
+  left: 0;                          /* KUNCI POSISI */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+ transform: translate(12px, 8px);
+  text-shadow: none;
+
+  background-image: linear-gradient(
+    45deg,
+    transparent 45%,
+    hsla(48,20%,90%,1) 45%,
+    hsla(48,20%,90%,1) 55%,
+    transparent 0
+  );
+
+  background-size: .05em .05em;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shad-anim 15s linear infinite;
+  pointer-events: none;
+    }
+
 h2{
     line-height: 65px;
     font-size: 55px;
@@ -198,33 +229,14 @@ ul.menu-item li:hover i {
 .user-info p {
     width: 74%;
     margin: auto;
-    padding-bottom: 25px;
+    
 }
 .user-info h3{
     padding-top: 40px;
-    padding-bottom: 20px;
+   
     font-weight: bold;
 }
-.user-info:before {
-    content: "";
-    background-color: #973af1;
-    bottom: 0%;
-    height: 35px;
-    width: 420px;
-    position: absolute;
-    left: 0;
-    border-radius: 20px;
-}
-.user-info:after {
-    content: "";
-    background-color: #491cde;
-    bottom: 2%;
-    height: 20px;
-    width: 415px;
-    position: absolute;
-    left: 2px;
-    border-radius: 20px;
-}
+
 .user-data span{
     font-size: 16px;
     font-weight: bold;
@@ -277,22 +289,46 @@ ul.social-media-icon.header {
     margin-bottom: 5px;
 }
 .share > a:hover i{
-    background: linear-gradient( 90deg, #4219dc, #973af1);
+    background: linear-gradient( 90deg, #4219dc, #808080);
 }
 .user-info img{
     border-radius: 15px;
-    width: 100%;
+    width: 80% !important;
 }
 .user-info {
-    border-radius: 20px;
+    border-radius: 22px;
     text-align: center;
-    padding: 20px;
-    background: linear-gradient( 0deg, #4219dc, #973af1);
+    padding: 26px 22px 18px;
+
+  background:
+    radial-gradient(
+      120% 80% at 50% 0%,
+      rgba(255,255,255,0.12) 0%,
+      rgba(255,255,255,0.02) 40%,
+      rgba(0,0,0,0) 60%
+    ),
+    linear-gradient(
+      180deg,
+      #4b1fe8 0%,
+      #6a2bd9 35%,
+      #3a0f4f 70%,
+      #160816 100%
+    );
+     box-shadow:
+    0 20px 50px rgba(2, 1, 1, 0.45),
+    inset 0 1px 0 rgba(255,255,255,0.08);
     position: fixed;
     overflow: hidden;
     top: 0%;
     margin: 25px 0px;
-    width: 23%;
+    margin-left: auto; 
+    top: 45%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 340px; 
+     backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+     
 }
 .button.download.button--moema.button--text-thick.button--text-upper.button--size-s {
     background: transparent;
@@ -358,7 +394,7 @@ ul.menu-item li:before {
     transition: .3s ease-in-out;
 }
 .user-info i{
-    padding-right: 10px;
+    padding-right: 0px;
 }
 .social-media{
     display: flex;
@@ -456,6 +492,8 @@ ul.menu-item li:before {
     -webkit-text-stroke-color: #808080a3;
     top: -60%;
     font-weight: 900;
+
+     text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
 }
 .headings h3 {
     padding-top: 83px;
@@ -481,7 +519,7 @@ ul.menu-item li:before {
     left: 25%;
 }
 .clients .headings h3:before {
-    left: 39%;
+    left: 68%;
 }
 .client {
     padding: 40px;
@@ -662,7 +700,7 @@ li.time:not(:last-child):before {
     position: absolute;
     border-bottom: 30px solid #10152c;
     border-right: 30px solid transparent;
-    top: 0%;
+    top: -5%;
 }
 .education h5:after {
     content: "";
@@ -1712,12 +1750,18 @@ footer:before {
   -o-animation-timing-function: ease-in-out;
 }
 
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }
+  
 @keyframes zoomInOut {
   0% {
     -webkit-transform: rotate(0deg) scale(0.7);
     transform: rotate(0deg) scale(0.7);
     opacity: 0;
   }
+  
 
   50% {
     -webkit-transform: rotate(180deg) scale(1);
@@ -2569,7 +2613,7 @@ form.blog input[type="text"] {
 .photography.portfolio-two a.button.button--moema.button--text-thick.button--text-upper.button--size-s {
     margin-bottom: 30px;
 }
-.photography span{s
+.photography span{
     font-size: 18px;
     font-weight: bold;
     color: #999999;
@@ -2887,7 +2931,6 @@ body.dark #stickyHeader.slideUp{
 }
 #stickyHeader.slideUp img.drak{
     display: block;
-     width: 87px;
 }
 a.bar-menu{
         color: white;
@@ -3650,7 +3693,7 @@ a.button.button--moema.button--text-thick.button--text-upper.button--size-s {
     }
 }
 @keyframes displayMessage {
-    0 {
+    0% {
         opacity:0;
     }
     100% {
@@ -3848,7 +3891,7 @@ body.menu-layer.light header.two.three
     -webkit-text-stroke-color: #000;
     font-size: 40px;
     text-transform: uppercase;
-    font-weight: 900;s
+    font-weight: 900;
     letter-spacing: 5px;
 }
 .landing-page-end .load-button{
@@ -4150,7 +4193,7 @@ header.for img.light{
     width: 106%;
     content: "";
     top: 4%;
-    left: ;
+  
  }
  .present-data-home-page .owl-dots {
     display: none;
@@ -4416,19 +4459,42 @@ header.two a.bar-menu {
 .box * {
   z-index: 3;
 }
-.close i {
-    position: absolute;
-    font-size: 22px;
-    background-color: black;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    right: 0%;
-    top: 0%;
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
 }
+.close i {
+   width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #6a2cff, #8b5cf6);
+  color: #fff;
+
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.45);
+  transition: all 0.3s ease;
+}
+
+
+
+.close i:hover {
+  transform: rotate(90deg) scale(1.1);
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.65);
+}
+
+.close i:active {
+  transform: scale(0.95);
+}
+
 .box .button--moema {
     padding: 15px 45px;
 }
@@ -4441,7 +4507,7 @@ header.two a.bar-menu {
 }
 .box .your-name {
     padding: 50px;
-    border-radius: 0;
+    border-radius: 12px;
 }
 .box form.one input[type="text"],.box .nice-select.Advice{
     height: 50px;
@@ -4601,14 +4667,130 @@ a#relatedd {
 .demos-main {
     background: #ffffff;
 }
-.sr-only {
+
+
+.profile-photo {
+  box-shadow:
+    0 0 0 4px rgba(255,255,255,0.06),
+    0 20px 40px rgba(0,0,0,0.45);
+}
+/* ===============================
+   CERTIFICATION CARD FIX
+================================ */
+
+.cert-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  border-left: 4px solid #7c5cff; /* accent line */
+}
+
+/* Tahun */
+.cert-card .cert-year,
+.cert-card h5 {
+  color: #7c5cff;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Judul */
+.cert-card > p {
+  font-size: 14px;
+  color: #cfcfe6;
+  margin-bottom: 14px;
+}
+
+/* Isi sertifikasi */
+.cert-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Logo */
+.cert-content img {
+  width: 90px;
+  max-height: 48px;
+  object-fit: contain;
+  filter: brightness(0.95);
+}
+
+/* Nama institusi */
+.cert-content h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Deskripsi */
+.cert-content p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #a9aacb;
+}
+
+/* Timeline dot alignment */
+.cert-card::before {
+  content: "";
   position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+  left: -32px;
+  top: 28px;
+  width: 12px;
+  height: 12px;
+  background: #7c5cff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(124,92,255,0.2);
+}
+
+.education.cert-card h5:after {
+  display: none;
+}
+
+.cert-section {
+  position: relative;
+  z-index: 2;
+  margin-top: 30px;
+}
+
+
+/* === User Social Media === */
+.user-social {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.user-social a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #2a2f55, #1a1e3a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b9b9ff;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+/* Hover Effect */
+.user-social a:hover {
+  color: #fff;
+  background: linear-gradient(145deg, #7b5cff, #5a3dff);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(123, 92, 255, 0.6);
+}
+
+/* Optional: glow ring */
+
+
+.user-social a:hover::after {
+  opacity: 1;
 }
