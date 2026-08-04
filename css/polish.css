@@ -214,6 +214,11 @@ body.dark-layout #contactForm textarea:focus {
   outline: none;
 }
 
+/* ---------- Hero: blend with particle background ---------- */
+body.dark-layout .profile-info {
+  background: transparent !important;
+}
+
 /* ---------- Section spacing rhythm ---------- */
 body.dark-layout section.gap {
   padding-top: 60px;
