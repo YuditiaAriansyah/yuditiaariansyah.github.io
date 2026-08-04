@@ -1,0 +1,277 @@
+/* ==========================================================================
+   Polish layer — visual & UX refinements on top of the base template.
+   Loaded last so it can safely override spacing, color and rhythm without
+   touching the vendor template files.
+   ========================================================================== */
+
+:root {
+  --color-theme-light: #8b5cf6;
+  --color-theme-dark: #4c1d95;
+  --bg-surface: #151a33;
+  --bg-surface-2: #1b2140;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --text-muted: #9a9db3;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-lift: 0 16px 40px rgba(105, 40, 230, 0.25);
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
+
+html { scroll-behavior: smooth; }
+
+* { box-sizing: border-box; }
+
+body.dark-layout {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-theme);
+  color: #fff;
+}
+
+a, button, .filter-btn, .magic-hover {
+  transition: color .25s ease, background-color .25s ease,
+              border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-theme-light);
+  outline-offset: 3px;
+}
+
+/* ---------- Typography rhythm ---------- */
+body.dark-layout p { color: var(--text-muted); }
+
+body.dark-layout .heading h1 {
+  opacity: .06;
+  letter-spacing: 2px;
+}
+
+body.dark-layout .heading h3,
+body.dark-layout .headings h3 {
+  font-weight: 700;
+  letter-spacing: .5px;
+  position: relative;
+  padding-bottom: 14px;
+  margin-bottom: 24px !important;
+}
+
+body.dark-layout .heading h3::after,
+body.dark-layout .headings h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--color-theme), var(--color-theme-light));
+}
+
+body.dark-layout .who-i-am p {
+  line-height: 1.85;
+  max-width: 62ch;
+}
+
+/* ---------- Profile / hero ---------- */
+body.dark-layout .user-info .profile-photo img {
+  border-radius: 50%;
+  box-shadow: var(--shadow-lift);
+  border: 3px solid var(--border-subtle);
+}
+
+body.dark-layout .user-data h1[data-shadow] {
+  letter-spacing: .5px;
+}
+
+body.dark-layout .user-data > div > p {
+  color: var(--text-muted);
+  letter-spacing: .3px;
+}
+
+/* ---------- Cards: services, quotes, clients, education, certs, charts ---------- */
+body.dark-layout .service,
+body.dark-layout .quote,
+body.dark-layout .client,
+body.dark-layout .chart,
+body.dark-layout .award-data,
+body.dark-layout .cert-card,
+body.dark-layout .education .studies {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+body.dark-layout .service:hover,
+body.dark-layout .cert-card:hover,
+body.dark-layout .client:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+  border-color: rgba(139, 92, 246, .35);
+}
+
+body.dark-layout .service h5 {
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+body.dark-layout .service p {
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+/* Certification & experience logos: normalize wildly inconsistent inline sizes */
+body.dark-layout .cert-content img {
+  width: auto !important;
+  max-width: 96px;
+  max-height: 48px;
+  object-fit: contain;
+  margin: 0 0 12px 0 !important;
+}
+
+body.dark-layout .education img {
+  width: auto !important;
+  max-width: 150px;
+  max-height: 46px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+body.dark-layout .cert-card,
+body.dark-layout .education {
+  padding: 20px 22px;
+}
+
+/* ---------- Skill bars ---------- */
+body.dark-layout .chart .bar {
+  background: linear-gradient(90deg, var(--color-theme), var(--color-theme-light)) !important;
+  border-radius: 6px;
+}
+
+/* ---------- Buttons ---------- */
+body.dark-layout .button.button--moema {
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: .8px;
+}
+
+body.dark-layout .button.button--moema:hover {
+  box-shadow: 0 8px 24px rgba(105, 40, 230, .45);
+}
+
+/* ---------- Filters (Portfolio) ---------- */
+body.dark-layout .filter-btn {
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+}
+
+body.dark-layout .filter-btn.is-checked,
+body.dark-layout .filter-btn.active-work {
+  background: var(--color-theme) !important;
+  border-color: var(--color-theme);
+}
+
+/* ---------- Contact ---------- */
+body.dark-layout #contactForm input,
+body.dark-layout #contactForm textarea {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+body.dark-layout #contactForm input:focus,
+body.dark-layout #contactForm textarea:focus {
+  border-color: var(--color-theme-light);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, .2);
+  outline: none;
+}
+
+/* ---------- Section spacing rhythm ---------- */
+body.dark-layout section.gap {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+body.dark-layout .clients-reviews,
+body.dark-layout .clients,
+body.dark-layout .services,
+body.dark-layout .who-i-am,
+body.dark-layout .cert-section {
+  margin-bottom: 42px;
+}
+
+/* ---------- Portfolio project cards ---------- */
+body.dark-layout .project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+body.dark-layout .project-card {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+body.dark-layout .project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+  border-color: rgba(139, 92, 246, .35);
+}
+
+body.dark-layout .project-card-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+body.dark-layout .project-card-head img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #fff;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+body.dark-layout .project-card-head h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+body.dark-layout .project-meta {
+  font-size: 13px;
+  color: var(--color-theme-light);
+  letter-spacing: .3px;
+}
+
+body.dark-layout .project-card p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ---------- Responsive tightening ---------- */
+@media (max-width: 767px) {
+  body.dark-layout section.gap {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  body.dark-layout .heading h3,
+  body.dark-layout .headings h3 {
+    font-size: 22px;
+  }
+  body.dark-layout .who-i-am p {
+    max-width: 100%;
+  }
+}
