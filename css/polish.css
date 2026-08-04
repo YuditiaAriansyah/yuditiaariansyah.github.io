@@ -68,9 +68,25 @@ a, button, .filter-btn, .magic-hover {
 /* ---------- Typography rhythm ---------- */
 body.dark-layout p { color: var(--text-muted); }
 
-body.dark-layout .heading h1 {
-  opacity: .06;
+body.dark-layout .heading .heading-mark {
+  font-size: 200px;
+  position: absolute;
+  z-index: 0;
+  top: -60%;
+  font-weight: 900;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #808080a3;
+  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+  opacity: .35;
   letter-spacing: 2px;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  body.dark-layout .heading .heading-mark {
+    font-size: 110px;
+  }
 }
 
 body.dark-layout .heading h3,
