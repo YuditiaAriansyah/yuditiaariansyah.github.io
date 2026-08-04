@@ -19,6 +19,30 @@
 
 html { scroll-behavior: smooth; }
 
+/* ---------- Animated particle background ---------- */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at top, #171c3a 0%, #0b0e1f 60%, #08091a 100%);
+}
+
+#particles-js canvas {
+  pointer-events: auto;
+}
+
+body.dark-layout .tabs.js-tabs,
+body.dark-layout .page-loader {
+  position: relative;
+  z-index: 1;
+}
+
 * { box-sizing: border-box; }
 
 body.dark-layout {
