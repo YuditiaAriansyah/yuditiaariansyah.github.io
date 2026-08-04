@@ -153,6 +153,19 @@ body.dark-layout .client:hover {
   border-color: rgba(139, 92, 246, .35);
 }
 
+body.dark-layout .service-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-theme), var(--color-theme-light));
+  font-size: 22px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(105, 40, 230, .35);
+}
+
 body.dark-layout .service h5 {
   margin-top: 14px;
   font-weight: 600;
@@ -305,6 +318,69 @@ body.dark-layout .project-card p {
   font-size: 14.5px;
   line-height: 1.7;
   margin: 0;
+}
+
+/* ---------- Availability badge ---------- */
+body.dark-layout .availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(74, 222, 128, .35);
+  background: rgba(74, 222, 128, .08);
+  color: #86efac !important;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+body.dark-layout .availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 rgba(74, 222, 128, .6);
+  animation: pulse-dot 2s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, .6); }
+  70% { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+/* ---------- Back to top ---------- */
+#back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--color-theme), var(--color-theme-light));
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .3s ease, transform .3s ease, visibility .3s ease, box-shadow .3s ease;
+  box-shadow: 0 8px 20px rgba(105, 40, 230, .4);
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  box-shadow: 0 10px 26px rgba(105, 40, 230, .6);
+  transform: translateY(-3px);
 }
 
 /* ---------- Responsive tightening ---------- */
