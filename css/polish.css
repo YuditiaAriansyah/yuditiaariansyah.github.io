@@ -442,6 +442,39 @@ body.dark-layout .availability-dot {
   transform: translateY(-3px);
 }
 
+/* ---------- Mobile nav identity ---------- */
+body.dark-layout .mobile-nav-img-data {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+body.dark-layout .mobile-nav-img-data img {
+  width: 48px;
+  height: 48px;
+  max-width: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+body.dark-layout .mobile-nav-img-data h6 {
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Safety net: no image anywhere should ever exceed its container,
+   regardless of intrinsic size (prevents the mobile-nav-logo-style
+   overflow bug from recurring elsewhere). */
+body.dark-layout img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* ---------- Responsive tightening ---------- */
 @media (max-width: 767px) {
   body.dark-layout section.gap {
@@ -454,5 +487,8 @@ body.dark-layout .availability-dot {
   }
   body.dark-layout .who-i-am p {
     max-width: 100%;
+  }
+  body.dark-layout .user-data .lightbox-toggle {
+    margin-bottom: 14px;
   }
 }
