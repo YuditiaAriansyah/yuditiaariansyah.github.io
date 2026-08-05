@@ -288,8 +288,19 @@ body.dark-layout #contactForm textarea:focus {
   outline: none;
 }
 
-/* ---------- Hero: blend with particle background ---------- */
-body.dark-layout .profile-info {
+/* ---------- Tab sections: blend with particle background ----------
+   .about-me/.Experience/.portfolio/.contact all had an opaque
+   #030718 panel (style.css), same as the hero — it hid the
+   particles on every tab except Home. Individual cards inside
+   (.service, .client, .project-card, .education, .cert-card,
+   .chart, etc.) already have their own solid backgrounds, so
+   removing this outer panel doesn't hurt text contrast.
+*/
+body.dark-layout .profile-info,
+body.dark-layout .about-me,
+body.dark-layout .Experience,
+body.dark-layout .portfolio,
+body.dark-layout .contact {
   background: transparent !important;
 }
 
