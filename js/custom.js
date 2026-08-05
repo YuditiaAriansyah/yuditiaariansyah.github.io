@@ -355,6 +355,34 @@ setInterval(function(){
           once:true
       });
 
+      // Guard against elements staying stuck at opacity:0 if AOS's
+      // initial viewport calculation ran before layout settled
+      // (e.g. images still loading, fixed background elements).
+      // Belt-and-suspenders: refresh on load AND after a short delay,
+      // since load-event timing has proven unreliable across browsers.
+      window.addEventListener('load', function () {
+        AOS.refreshHard();
+      });
+      setTimeout(function () {
+        AOS.refreshHard();
+      }, 400);
+      if (document.readyState === 'complete') {
+        AOS.refreshHard();
+      }
+
+      // Final hard guarantee: whatever AOS did or didn't do, content
+      // must never stay invisible. Force-reveal anything still hidden
+      // after a couple of seconds.
+      setTimeout(function () {
+        document.querySelectorAll('[data-aos]').forEach(function (el) {
+          if (getComputedStyle(el).opacity === '0') {
+            el.classList.add('aos-animate');
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+          }
+        });
+      }, 2000);
+
 
 /*   --------------------  loader ----------------------  */
 

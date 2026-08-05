@@ -19,6 +19,21 @@
 
 html { scroll-behavior: smooth; }
 
+/* ---------- AOS reveal-on-scroll safety net ----------
+   The AOS library has proven unreliable in some environments at
+   marking elements "in view" on load (they stay stuck at their
+   pre-animation opacity:0 state). Since hiding real content behind
+   a flaky third-party animation is worse than skipping the
+   animation, force visibility once the element is flagged animated,
+   and — as a hard fallback — after a few seconds regardless, so
+   text can never be permanently invisible.
+*/
+[data-aos].aos-animate {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
 /* ---------- Animated particle background ---------- */
 #particles-js {
   position: fixed;
