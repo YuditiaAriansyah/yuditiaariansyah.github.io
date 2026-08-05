@@ -22,17 +22,17 @@
         type: "circle"
       },
       opacity: {
-        value: 0.35,
+        value: 0.6,
         random: true,
         anim: {
           enable: true,
-          speed: 0.4,
-          opacity_min: 0.08,
+          speed: 0.5,
+          opacity_min: 0.2,
           sync: false
         }
       },
       size: {
-        value: 2.5,
+        value: 5,
         random: true,
         anim: {
           enable: false
@@ -42,8 +42,8 @@
         enable: true,
         distance: 140,
         color: "#6928e6",
-        opacity: 0.25,
-        width: 1
+        opacity: 0.35,
+        width: 1.2
       },
       move: {
         enable: true,
