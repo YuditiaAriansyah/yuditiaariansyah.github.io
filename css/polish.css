@@ -216,7 +216,22 @@ body.dark-layout .education {
   padding: 20px 22px;
 }
 
-/* ---------- Skill bars ---------- */
+/* ---------- Skill bars ----------
+   style.css's .bar keyframe animates every bar to a hardcoded 68%
+   regardless of the skill's actual percentage (100%, 80%, 95%...),
+   so the fill never matched the printed number. Read the value
+   from a --fill custom property set per bar instead.
+*/
+body.dark-layout .bar {
+  width: 0;
+  animation: bar-fill-to-value 1.4s ease-out forwards;
+}
+
+@keyframes bar-fill-to-value {
+  from { width: 0; }
+  to { width: var(--fill, 68%); }
+}
+
 body.dark-layout .chart .bar {
   background: linear-gradient(90deg, var(--color-theme), var(--color-theme-light)) !important;
   border-radius: 6px;
@@ -251,6 +266,32 @@ body.dark-layout .filter-btn.active-work {
    type="tel" fields fall back to tiny browser defaults without
    this. Reapply the same box model here so every field matches.
 */
+body.dark-layout .linkedin-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(10, 102, 194, .4);
+  background: rgba(10, 102, 194, .12);
+  color: #5eb3f5 !important;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .2px;
+  transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+body.dark-layout .linkedin-cta i {
+  font-size: 17px;
+}
+
+body.dark-layout .linkedin-cta:hover {
+  background: rgba(10, 102, 194, .28);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(10, 102, 194, .3);
+}
+
 body.dark-layout #contactForm input[type="email"],
 body.dark-layout #contactForm input[type="tel"] {
   width: 100%;
