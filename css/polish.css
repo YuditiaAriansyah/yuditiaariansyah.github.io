@@ -242,7 +242,37 @@ body.dark-layout .filter-btn.active-work {
   border-color: var(--color-theme);
 }
 
-/* ---------- Contact ---------- */
+/* ---------- Contact ----------
+   style.css only styles input[type="text"] with the field's real
+   layout (width/height/padding/margin); type="email" and
+   type="tel" fields fall back to tiny browser defaults without
+   this. Reapply the same box model here so every field matches.
+*/
+body.dark-layout #contactForm input[type="email"],
+body.dark-layout #contactForm input[type="tel"] {
+  width: 100%;
+  margin-top: 20px;
+  color: #757678;
+  height: 60px;
+  border-radius: 41px;
+  padding-left: 25px;
+  outline: none;
+}
+
+body.dark-layout #consultForm input[type="email"],
+body.dark-layout #consultForm input[type="tel"] {
+  height: 50px;
+  width: 100%;
+  padding-left: 25px;
+  outline: 0;
+  margin-right: 40px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+  border: 1px solid #dedede;
+}
+
 body.dark-layout #contactForm input,
 body.dark-layout #contactForm textarea {
   background: var(--bg-surface);
