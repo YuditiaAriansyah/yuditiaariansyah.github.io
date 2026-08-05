@@ -132,7 +132,10 @@ body.dark-layout .who-i-am p {
 
 /* ---------- Profile / hero ---------- */
 body.dark-layout .user-info .profile-photo img {
-  border-radius: 50%;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lift);
   border: 3px solid var(--border-subtle);
 }
