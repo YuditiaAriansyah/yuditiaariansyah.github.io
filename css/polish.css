@@ -516,6 +516,26 @@ body.dark-layout img {
   height: auto;
 }
 
+/* ---------- Clear the fixed hamburger button ----------
+   Below 1200px, header.pages-one collapses into a small fixed
+   button pinned at left:90% (top-right corner). The main content
+   column (.col-xl-8/.col-lg-12) has no matching clearance, so
+   headings and text run directly underneath it — most visibly the
+   big "About Me"/"Experience"/etc. section titles up top. Reserve
+   safe space on the right so nothing renders under the button.
+*/
+@media (max-width: 1200px) {
+  body.dark-layout .content-area .container {
+    padding-right: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  body.dark-layout .content-area .container {
+    padding-right: 85px;
+  }
+}
+
 /* ---------- Responsive tightening ---------- */
 @media (max-width: 767px) {
   body.dark-layout section.gap {
