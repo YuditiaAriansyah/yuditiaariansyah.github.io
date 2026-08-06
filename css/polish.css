@@ -19,6 +19,24 @@
 
 html { scroll-behavior: smooth; }
 
+/* ---------- Fix collapsed tab content on first load ----------
+   .content-area is position:absolute with height:100%, but its
+   real containing block (.tabs.js-tabs) never gets an explicit
+   height of its own — the aniTabs plugin only sets one via inline
+   style when a nav link is *clicked* (custom.js/anitabs.min.js).
+   On first load, before any click, that inline height is never
+   applied, so height:100% resolves against nothing, .content-area
+   collapses to ~0px, and its overflow:hidden clips every tab's
+   content completely invisible until the user happens to click a
+   nav item. Let it size to its own (real, in-flow) child content
+   instead of depending on an ancestor that's never tall enough.
+*/
+body.dark-layout .content-area {
+  height: auto !important;
+  min-height: 100vh;
+  overflow: visible !important;
+}
+
 /* ---------- AOS reveal-on-scroll safety net ----------
    The AOS library has proven unreliable in some environments at
    marking elements "in view" on load (they stay stuck at their
