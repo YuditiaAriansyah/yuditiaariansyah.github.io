@@ -348,6 +348,27 @@ body.dark-layout .contact {
   background: transparent !important;
 }
 
+/* Hero entrance: plain CSS animation instead of AOS/JS-driven
+   reveal. The hero is the very first thing a visitor sees, and
+   AOS occasionally failed to mark it "in view" on load, leaving it
+   stuck invisible until some other interaction nudged a refresh.
+   A CSS-only animation always runs on paint, no JS timing involved. */
+body.dark-layout .user-data {
+  opacity: 0;
+  animation: hero-fade-up .6s ease-out .15s forwards;
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ---------- Section spacing rhythm ---------- */
 body.dark-layout section.gap {
   padding-top: 60px;
@@ -425,6 +446,8 @@ body.dark-layout .availability-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  margin-top: 16px;
+  margin-left: 12px;
   padding: 8px 16px;
   border-radius: 999px;
   border: 1px solid rgba(74, 222, 128, .35);
