@@ -386,11 +386,17 @@ setInterval(function(){
 
 /*   --------------------  loader ----------------------  */
 
-$(window).on('load',function(){
-  setTimeout(function(){ // orix loader
+function hideLoader() {
   $('.page-loader').fadeOut();
-  });
-});
+}
+if (document.readyState === 'complete') {
+  hideLoader();
+} else {
+  $(window).on('load', hideLoader);
+}
+// Hard fallback: window 'load' has proven unreliable to bind in
+// time on fast/cached loads — never let the loader block the page.
+setTimeout(hideLoader, 1500);
 /*   --------------------  loader ----------------------  */
 var $owl = $('.zoom-slider');
 

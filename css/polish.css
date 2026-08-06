@@ -34,6 +34,26 @@ html { scroll-behavior: smooth; }
   visibility: visible !important;
 }
 
+/* ---------- Page loader safety net ----------
+   .page-loader (style.css) is a fixed, full-viewport, z-index
+   1111111111111 overlay that only disappears if jQuery's
+   $(window).on('load', ...) handler fires and runs fadeOut(). That
+   binding can lose the race on fast/cached loads (the load event
+   may already have fired before the script attaches its listener),
+   leaving the loader stuck forever and the entire page looking
+   blank. This is a pure-CSS guarantee that needs no JS at all: hide
+   it outright a couple of seconds after paint, no matter what.
+*/
+.page-loader {
+  animation: force-hide-loader 0s 2s forwards;
+}
+
+@keyframes force-hide-loader {
+  to {
+    display: none;
+  }
+}
+
 /* ---------- Animated particle background ---------- */
 #particles-js {
   position: fixed;
